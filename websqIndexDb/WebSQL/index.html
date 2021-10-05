@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>SQL WEB APPLICATION</title>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  
+     <link rel="stylesheet" type="text/css" href="main.css">
+
+
+</head>  
+<body>  
+   <div class="container">
+    <h2 class="head">STUDENT INFORMATION</h2>
+ 
+    <form id="frm1">  
+        <table class="tbl_box" id="tblinsert">  
+
+            <tr>  
+                <td class="td_color">Student ID</td>  
+                <td id="tdorginal"><input  type="text" id="tbID" /></td>  
+                <td id="tdid" style="display:none">  
+                    <select id="ddlid" onchange="myFunction()"></select>  
+                </td>  
+            </tr>  
+            <tr id="rowName">  
+                <td class="td_color">Student Name</td>  
+                <td><input type="text" id="tbName" /></td>  
+  
+            </tr>  
+            <tr id="rowLocation">  
+                <td class="td_color">Email:</td>  
+                <td><input  type="text" id="tbLocation" /></td>  
+            </tr>  
+  
+            <tr id="rowdept">  
+                <td class="td_color">Department</td>  
+                <td>  
+                    <select class="tbl_lst" id="tbLdept"></select> 
+                </td> 
+            </tr>  
+            <tr id="rowLocation">  
+                <td class="td_color">Image</td>  
+                <td><input type='file' id="image" onchange="readURL(this);" /></td>  
+            </tr>  
+  
+        </table>  
+
+        <div class="left">
+            <img id="blah" src="#" alt="" /><br>
+        </div>
+    </form>  
+    <br />  
+    <button class="btn" id="btnInsert" onclick="Insert()" style="background:red;color:black; padding: 6px 25px;border: 0;">Submit</button>  
+    <button id="btnupdate" onclick="updte()" style="background:#18A05E;color:#fff;display:none;padding:7px 15px;border: 0;">Update</button>  
+    <button id="btndel" onclick="del()" style="background:red;color:#fff;display:none;padding:7px 15px; border: 0;">Delete</button>  
+      
+    <br /><br />  
+    <button id="btnupdateshw" onclick="showupdte()" style="background:#18A05E;color:#fff; padding:7px 15px;border: 0;">Update Student</button>  
+    <button id="btndeleteshw" onclick="showdel()" style="background:red;color:#fff; padding:7px 15px; border: 0;">Delete Student</button>  
+    <button id="btninsertshw" onclick="showin()" style="background:#800020;color:#fff;display:none;padding:7px 15px;border: 0">Save Student</button>  
+    <br /><br />
+    
+        <!--Dropdowm------------------------------------------------------------------ -->
+<div id="dropZone">Drop Your Image Here
+
+</div>
+        <br /><br /> 
+        <!--Dropdowm------------------------------------------------------------------ -->
+
+
+    <table class="tbl" id="tblGrid" cellpadding="7px" cellspacing="0" border="1">  
+        <tr style="background-color:gray;color:black;font-size:15px;">  
+            <td >  
+                Student ID  
+            </td>  
+            <td >  
+               Student Name  
+            </td>  
+            <td >  
+                Email
+            </td>  
+            <td >  
+                Department  
+            </td> 
+	     <td >  
+                Image  
+            </td>  
+        </tr>  
+    </table>  
+    <br />  
+   </div>
+
+       
+
+
+    <script src="app.js" type="text/javascript"></script>
+
+
+    <script>
+     document.getElementById('dropZone').addEventListener('dragover',  (e) =>{
+            e.preventDefault();
+            });
+
+        document.getElementById('dropZone').addEventListener('drop',  (e) =>{
+            e.preventDefault();
+            var files = e.dataTransfer.files;
+            
+            if (files && files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) 
+		{
+		imageName=e.target.result;
+                    $('#blah').attr('src', e.target.result);
+                };
+                reader.readAsDataURL(files[0]);
+            }
+            });
+
+    </script>
+</body>  
+</html>  

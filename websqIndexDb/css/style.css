@@ -1,0 +1,176 @@
+/*Base font*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap");
+/*================================== all pages variable  ================================*/
+/*==================================  mixin  ================================*/
+/*==================================  global  ================================*/
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-image:url("../image/2.jpg");
+  
+  background-size:cover;
+  
+ }
+
+
+/*================================== preloader css  ================================*/
+.Appily-preloader {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-items: center;
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+  background: #fff; }
+
+.Appily-preloader .anim-preloader {
+  position: absolute;
+  z-index: 100; }
+
+/* Spinner */
+.Appily-preloader .anim-preloader .spinner {
+  -webkit-animation: spinner 1s infinite linear;
+  animation: spinner 1s infinite linear;
+  border-radius: 50%;
+  border: 3px solid #f0545f;
+  border-top-color: #6934ff;
+  height: 100px;
+  margin: 0 auto 45px auto;
+  width: 100px; }
+
+/* Text */
+.Appily-preloader .anim-preloader .txt-loading {
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.Appily-preloader .anim-preloader .txt-loading .letters-loading:before {
+  -webkit-animation: letters-loading 4s infinite;
+  animation: letters-loading 4s infinite;
+  color: #6934ff;
+  content: attr(data-text-preloader);
+  left: 0;
+  opacity: 0;
+  top: 0;
+  line-height: 70px;
+  position: absolute; }
+
+.Appily-preloader .anim-preloader .txt-loading .letters-loading {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  letter-spacing: 15px;
+  display: inline-block;
+  color: #1b212f;
+  position: relative;
+  font-size: 70px;
+  line-height: 70px; }
+
+.Appily-preloader .anim-preloader .txt-loading .letters-loading:nth-child(2):before {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s; }
+
+.Appily-preloader .anim-preloader .txt-loading .letters-loading:nth-child(3):before {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s; }
+
+.Appily-preloader .anim-preloader .txt-loading .letters-loading:nth-child(4):before {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s; }
+
+.Appily-preloader .anim-preloader .txt-loading .letters-loading:nth-child(5):before {
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s; }
+
+.Appily-preloader .anim-preloader .txt-loading .letters-loading:nth-child(6):before {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s; }
+
+.Appily-preloader .anim-preloader .txt-loading .letters-loading:nth-child(7):before {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s; }
+
+.Appily-preloader .loader-section {
+  background-color: #ffffff;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: calc(50% + 1px); }
+
+.loaded .anim-preloader {
+  opacity: 0;
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out; }
+
+/*================================== preloader keyframes  ================================*/
+@-webkit-keyframes spinner {
+  to {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg); } }
+@keyframes spinner {
+  to {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg); } }
+
+@-webkit-keyframes letters-loading {
+  0%,
+  75%,
+  100% {
+    opacity: 0;
+    -webkit-transform: rotateY(-90deg);
+    transform: rotateY(-90deg); }
+  25%,
+  50% {
+    opacity: 1;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); } }
+
+@keyframes letters-loading {
+  0%,
+  75%,
+  100% {
+    opacity: 0;
+    -webkit-transform: rotateY(-90deg);
+    transform: rotateY(-90deg); }
+  25%,
+  50% {
+    opacity: 1;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); } }
+
+@media screen and (max-width: 767px) {
+  .Appily-preloader .anim-preloader .spinner {
+    height: 7em;
+    width: 7em; } }
+
+@media screen and (max-width: 500px) {
+  .Appily-preloader .anim-preloader .spinner {
+    height: 5em;
+    width: 5em; }
+  .Appily-preloader .anim-preloader .txt-loading .letters-loading {
+    font-size: 40px;
+    letter-spacing: 10px; } }
+
+/*================================== home page ================================*/
+
+.container
+{
+ padding:100px;
+ text-align:center;
+ 
+}
+
+
